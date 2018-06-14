@@ -8,10 +8,11 @@
         "npm": ">=3.10.8"
     },
     "scripts": {
-        "test": "jasmine"
+        "test": "protractor conf.js"
     },
     "devDependencies": {
         "jasmine": "^3.1.0",
-        "jasmine-ts-console-reporter": "^3.1.1"
+        "jasmine-ts-console-reporter": "^3.1.1",
+        "protractor": "^5.3.2"
     }
 }
