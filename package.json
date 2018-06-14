@@ -1,0 +1,17 @@
+{
+    "name": "test-project-search-job",
+    "version": "0.0.1",
+    "license": "",
+    "author": "Kiryl Shytsikau",
+    "engines": {
+        "node": ">=6.9.0",
+        "npm": ">=3.10.8"
+    },
+    "scripts": {
+        "test": "jasmine"
+    },
+    "devDependencies": {
+        "jasmine": "^3.1.0",
+        "jasmine-ts-console-reporter": "^3.1.1"
+    }
+}
