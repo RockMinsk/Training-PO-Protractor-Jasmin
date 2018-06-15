@@ -1,5 +1,5 @@
-let career = require('./po/career.js');
-let job = require('./po/job.js')
+let career = require('../po/career.js');
+let job = require('../po/job.js')
 // let searchForm = require('./po/component/searchForm.js');
 let EC = protractor.ExpectedConditions;
 

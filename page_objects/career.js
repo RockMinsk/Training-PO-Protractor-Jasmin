@@ -14,6 +14,7 @@ let Career = function() {
     const jobIdDropDownElement = element(by.css('.autocomplete-suggestions'));
     const location = element(by.css('.selection'));
     const locationDropDownElement = element(by.css('.select-box-results'));
+    // const locationDropDownElements = location.all(by.tagName('label'));
     const skills = element(by.css('.multi-select-filter'));
     const skillsDropDownElement = element(by.css('.multi-select-dropdown'));
     const findButton = element(by.xpath('//button[@class="job-search__submit"]'));
