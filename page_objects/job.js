@@ -14,27 +14,43 @@ let Job = function() {
     const searchResultItems = element(by.xpath('//*[@class="search-result__list"]/child::*[@class="search-result__item"]'));
     const applyButton = element(by.css('.search-result__item-apply'));
     const shareButton = element(by.css('.search-result__share-button'));
-    
-    this.performFilterByRelocation = function() {
+    // The 'Relocation Help' check-box
+    this.relocation_tickCheckBox = function() {
         return relocationCheckBox.click();
-    }
-    
-    this.sortingByRelevance = function() {
+    };
+
+    this.relocation_untickCheckBox = function() {};
+
+    this.checkIfAllJobsInListContainRelocationOption = function() {};
+    // Search Results header:
+    this.getSearchResultsHeader = function() {};
+
+    this.checkIfSelectedJobIdPresentInHeader = function(getSearchResultsHeader) {};
+    // Sort By:
+    this.sorting_clickOnRelevanceOption = function() {
         return sortingRelevance.click();
-    }
+    };
 
-    this.sortingByDate = function() {
+    this.sorting_clickOnDateOption = function() {
         return sortingDate.click();
-    }
+    };
 
-    this.applyJob = function() {
+    this.sorting_isJobsOrderedByDate = function() {};
+
+    this.sorting_isJobsOrderedByRelevance = function() {};
+    //Search Results:
+    this.clickOnApplyButton = function() {
         return applyButton.click();
-    }
+    };
 
-    this.shareJob = function() {
+    this.clickOnShareButton = function() {
         return shareButton.click();
-    }
-}
+    };
+
+    this.isCorrectLocationForAllFindJobs = function() {};
+
+    this.isCorrectJobNameForAllFindJobs = function() {};
+};
 
 Job.prototype = Career;
 module.exports = new Job();
