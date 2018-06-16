@@ -1,9 +1,11 @@
 {
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "jasmine": true
     },
-    "extends": "eslint:recommended",
+    "plugins": ["jasmine"],
+    "extends": ["eslint:recommended", "plugin:jasmine/recommended"],
     "parserOptions": {
         "ecmaVersion": 6,
         "ecmaFeatures": {
@@ -14,7 +16,7 @@
     "rules": {
         "indent": [
             "error",
-            "space"
+            4
         ],
         "linebreak-style": [
             "error",
