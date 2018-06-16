@@ -5,6 +5,7 @@
     },
     "extends": "eslint:recommended",
     "parserOptions": {
+        "ecmaVersion": 6,
         "ecmaFeatures": {
             "jsx": true
         },
@@ -13,7 +14,7 @@
     "rules": {
         "indent": [
             "error",
-            "spaces"
+            "space"
         ],
         "linebreak-style": [
             "error",
