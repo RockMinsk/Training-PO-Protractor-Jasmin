@@ -15,41 +15,57 @@ let Job = function() {
     const applyButton = element(by.css('.search-result__item-apply'));
     const shareButton = element(by.css('.search-result__share-button'));
     // The 'Relocation Help' check-box
-    this.relocation_tickCheckBox = function() {
+    relocation_tickCheckBox = () => {
         return relocationCheckBox.click();
     };
 
-    this.relocation_untickCheckBox = function() {};
+    relocation_untickCheckBox = () => {
+        //TODO:
+    };
 
-    this.checkIfAllJobsInListContainRelocationOption = function() {};
+    checkIfAllJobsInListContainRelocationOption = () => {
+        //TODO:
+    };
     // Search Results header:
-    this.getSearchResultsHeader = function() {};
+    getSearchResultsHeader = () => {
+        //TODO:
+    };
 
-    this.checkIfSelectedJobIdPresentInHeader = function(getSearchResultsHeader) {};
+    checkIfSelectedJobIdPresentInHeader = getSearchResultsHeader => {
+        //TODO:
+    };
     // Sort By:
-    this.sorting_clickOnRelevanceOption = function() {
+    sorting_clickOnRelevanceOption = () => {
         return sortingRelevance.click();
     };
 
-    this.sorting_clickOnDateOption = function() {
+    sorting_clickOnDateOption = () => {
         return sortingDate.click();
     };
 
-    this.sorting_isJobsOrderedByDate = function() {};
+    this.sorting_isJobsOrderedByDate = () => {
+        //TODO:
+    };
 
-    this.sorting_isJobsOrderedByRelevance = function() {};
+    this.sorting_isJobsOrderedByRelevance = () => {
+        //TODO:
+    };
     //Search Results:
-    this.clickOnApplyButton = function() {
+    this.clickOnApplyButton = () => {
         return applyButton.click();
     };
 
-    this.clickOnShareButton = function() {
+    this.clickOnShareButton = () => {
         return shareButton.click();
     };
 
-    this.isCorrectLocationForAllFindJobs = function() {};
+    this.isCorrectLocationForAllFindedJobs = () => {
+        //TODO:
+    };
 
-    this.isCorrectJobNameForAllFindJobs = function() {};
+    this.isCorrectJobNameForAllFindedJobs = () => {
+        //TODO:
+    };
 };
 
 Job.prototype = Career;

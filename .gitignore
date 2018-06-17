@@ -5,3 +5,7 @@
 
 # IDEs and editors
 /.vscode
+
+# Log files
+debug.log
+*.log

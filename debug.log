@@ -1,4 +1,0 @@
-[0617/014718.188:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
-[0617/014718.197:ERROR:exception_snapshot_win.cc(88)] thread ID 2300 not found in process
-[0617/022635.075:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
-[0617/022635.076:ERROR:exception_snapshot_win.cc(88)] thread ID 11052 not found in process

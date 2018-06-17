@@ -1,50 +1,46 @@
+//NOTE: this is JUST testing spec file
+
 const { browser, protractor } = require('protractor');
 
 let career = require('../support/page_objects/career.js');
-let job = require('../support/page_objects/job.js')
-// let searchForm = require('./po/component/searchForm.js');
-let EC = protractor.ExpectedConditions;
+let job = require('../support/page_objects/job.js');
+let constant = require('../support/constants/constants.js')
 
-describe("Test", function() {
+describe("Testing the 'Job' page", function() {
+
+    beforeAll(() => {
+        browser.waitForAngularEnabled(false);
+        browser.ignoreSynchronization = true;
+        
+    });
 
     beforeEach(() => {
-        browser.ignoreSynchronization = true;
         career.get();
     });
 
-    it("should open the 'Job' page after click on the 'Find' button", () => {
-        // console.log(career.currentUrl());
-        return career.clickFindButton()
-            .then(() => console.log(career.currentUrl() + '----------'))
-            .then(() => career.skills_clickOnDropDownMenu())
-            // .then(() => career.skills_getAllAvailableOptions())
-            .then(() => career.location_clickOnDropDownMenu())
-            .then(() => career.location_getAllAvailableOptions())
-            .then(() => browser.sleep(2000))
-            .then(() => browser.wait(EC.urlContains(job.currentUrl())))
-            .then(() => console.log(job.currentUrl() + '-----------------------------------------------------'));
+    describe("Testing the 'Job' page", () => {});
+
+    it("test job page", async () =>{
+        await career.clickFindButton();
+        expect(browser.getCurrentUrl()).toEqual(constant.URL.JOB_PAGE);
+        await job.location_clickOnDropDownMenu();
+        await browser.sleep(3000);
     });
 
-    xit("just test"), () => {
-        career.skills_clickOnDropDownMenu();
-        browser.sleep(2000);
-        career.skills_getAllAvailableOptions();
-        console.log(career.skills_getAllAvailableOptions())
-        // console.log(career.location_getAllAvailableOptions()[0] + '+++++++++');
-    }
-
-    xit("get array of skills"), () => {
-        return career.clickFindButton()
-            .then(() => browser.sleep(2000))
-            .then(() => console.log(career.skills_getAllAvailableOptions()));
-    }
-
-    xit("should open search list by type some keyword in the 'Job ID' field", function() {
-        // console.log(career.currentUrl());
-        //career.typeKeyword('Test');
-        career.location_clickOnDropDownMenu();
-        career.location_getAllAvailableOptions();
-        browser.sleep(3000);
-        // console.log(job.currentUrl());
+    xit("get current Job value", async () => {
+        await career.jobId_typeTextInInputField('jav');
+        await career.jobId_selectOptionInOpenedDropList();
+        expect(career.jobId_getCurrentSelectedOption()).toEqual('Java (Full Stack) Developer');
     });
+
+    xit("get array of skills"), async () => {
+        await career.clickFindButton()
+        await browser.sleep(2000)
+        console.log(career.skills_getAllAvailableOptions());
+    };
+
+    xit("just test"), async  () => {
+        await career.skills_clickOnDropDownMenu();
+        await career.skills_getAllAvailableOptions();
+    };
 });
