@@ -14,12 +14,12 @@ exports.config = {
     },
     directConnect: true,
     framework: 'jasmine',
-    specs: ['./spec/test.js'],
+    specs: ['./e2e/specs/test.js'],
     // beforeLaunch: function() {
-    //     return new Promise(function(resolve){
-    //         reporter.beforeLaunch(resolve);
+    //     require('ts-node').register({
+    //       project: 'e2e/support/tsconfig.e2e.json'
     //     });
-    // },
+    //   },
     onPrepare: function () {
         // jasmine.getEnv().addReporter(reporter);
         // let jasmineReporters = require('jasmine-reporters');
