@@ -1,11 +1,7 @@
-let webBrowser = require('./config/capabilities.js');
-
 exports.config = {
     //seleniumAddress: 'http://localhost:4444/wd/hub',
-    //multiCapabilities: [/*webBrowser[process.env.BROWSER]*/],
-        //{browserName: 'chrome',},
+    //multiCapabilities: [ ], {browserName: 'chrome',},
     capabilities: {
-    // webBrowser[process.env.BROWSER],/*{
         'browserName': 'chrome',
         'chromeOptions': {
             // args: ['--headless', '--disable-gpu', '--disable-browser-side-navigation']
@@ -13,38 +9,19 @@ exports.config = {
           }   
     },
     directConnect: true,
+    SELENIUM_PROMISE_MANAGER: false, // Disable the Control Flow - use async await instead
     framework: 'jasmine',
     specs: ['./e2e/specs/test.js'],
-    // beforeLaunch: function() {
-    //     require('ts-node').register({
-    //       project: 'e2e/support/tsconfig.e2e.json'
-    //     });
-    //   },
-    onPrepare: function () {
-        // jasmine.getEnv().addReporter(reporter);
-        // let jasmineReporters = require('jasmine-reporters');
-        // jasmine.getEnv().addReporter(new jasmineReporters.JUnitXmlReporter({
-        //     consolidateAll: true,
-        //     savePath: 'test_report',
-        //     filePrefix: 'xmloutput'
-        // }));
-/*        if (process.env.BROWSER === 'chrome'){
-            browser.driver.manage().window().maximize();
-        }*/
-        // browser.driver.manage().window().setSize(view[process.env.VIEW]);
-        // console.log(view[process.env.VIEW])
+    // beforeLaunch: function() { },
+    onPrepare: () => {
         browser.driver.manage().window().maximize();
-        //console.log(webBrowser[process.env.BROWSER]);
     },
-    // afterLaunch: function(exitCode) {
-    //     return new Promise(function(resolve){
-    //         reporter.afterLaunch(resolve.bind(this, exitCode));
-    //     });
-    // },
+    // afterLaunch: function(exitCode) { },
     jasmineNodeOpts: {
-        defaultTimeoutInterval: 120000,
+        defaultTimeoutInterval: 20000,
+        showTiming: true,
         showColors: true,
-        // isVerbose: true,
+        isVerbose: true,
         includeStackTrace: true,
     },
     // allScriptsTimeout: 120000
