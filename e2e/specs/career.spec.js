@@ -22,12 +22,12 @@ describe("Testing the 'Career' page", function() {
         await career.location_getAllCitiesOfCountry(constant.COUNTRY.HUNGARY);
     });
 
-    xit("should open the 'Job' page after click on the 'Find' button", () => {
+    it("should open the 'Job' page after click on the 'Find' button", () => {
         career.clickFindButton();
         expect(browser.getCurrentUrl()).toEqual(constant.URL.JOB_PAGE);
     });
 
-    xit("should open the 'Job' page after selection of some Job in the 'Keyword' input field", async () => {
+    it("should open the 'Job' page after selection of some Job in the 'Keyword' input field", async () => {
         await career.jobId_typeTextInInputField('jav');
         await career.jobId_selectOptionInOpenedDropList();
         expect(browser.getCurrentUrl()).toEqual(constant.URL.CARRER_PAGE);
