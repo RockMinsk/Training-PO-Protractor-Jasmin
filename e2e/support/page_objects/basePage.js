@@ -1,7 +1,10 @@
-let BasePage = function() {
-    this.visit = function() {
+class BasePage {
+    constructor(url) {
+        this.url = url;
+    }
+    visit() {
         return browser.get(this.url);
     }
 }
 
-module.export = new BasePage();
+module.exports = BasePage;

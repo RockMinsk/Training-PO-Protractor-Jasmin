@@ -1,7 +1,9 @@
 const { browser, protractor } = require('protractor');
 
-let career = require('../support/page_objects/career.js');
-let constant = require('../support/constants/constants.js')
+const Career = require('../support/page_objects/career.js');
+const constant = require('../support/constants/constants.js')
+
+let career = new Career();
 
 describe("Testing the 'Job' page", function() {
 
