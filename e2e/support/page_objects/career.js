@@ -164,7 +164,6 @@ class Career extends BasePage {
     };
 
     skills_getAllAvailableOptions() {
-        debugger;
         let skillsArray = [];
         return skillsDropDownElements
             .then(items => {
@@ -179,6 +178,19 @@ class Career extends BasePage {
                 };
             })
     };
+
+    skills_clickFirstSkill(){
+        return skillsDropDownElements.first().click();
+    }
+
+    skills_clickLastSkill(){
+        return skillsDropDownElements.last().click();
+    }
+
+    skills_clickSkillByIndex(index){
+        return skillsDropDownElements
+            .then(items => items[index].click());
+    }
 
     skills_selectOptionInOpenedDropList() {
         //TODO:

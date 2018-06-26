@@ -29,9 +29,12 @@ describe("Testing the 'Job' page", function() {
     describe("Testing the 'Job' page", () => {
         fit("get array of skills", async () => {
             await career.clickFindButton()
-            await browser.sleep(2000)
             await job.skills_clickOnDropDownMenu();
-            career.skills_getAllAvailableOptions();
+            await job.skills_clickFirstSkill();
+            await job.skills_clickLastSkill();
+            await job.skills_clickSkillByIndex(5);
+            await browser.sleep(2000);
+            // career.skills_getAllAvailableOptions();
         });
 
         xit("test job page", async () =>{
